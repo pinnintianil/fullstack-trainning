@@ -1,19 +1,42 @@
-let num = 17;
-let isPrime = true;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number</title>
+</head>
+<body>
 
-if (num <= 1) {
-    isPrime = false;
-}
+    <h2>Prime Number Checker</h2>
 
-for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-        isPrime = false;
-        break;
-    }
-}
+    <input type="number" id="number" placeholder="Enter a number">
+    <button onclick="checkPrime()">Check</button>
 
-if (isPrime) {
-    console.log(num + " is a Prime Number");
-} else {
-    console.log(num + " is Not a Prime Number");
-}
+    <p id="result"></p>
+
+    <script>
+        function checkPrime() {
+            let num = Number(document.getElementById("number").value);
+            let isPrime = true;
+
+            if (num <= 1) {
+                isPrime = false;
+            }
+
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                document.getElementById("result").innerHTML =
+                    num + " is a Prime Number";
+            } else {
+                document.getElementById("result").innerHTML =
+                    num + " is Not a Prime Number";
+            }
+        }
+    </script>
+
+</body>
+</html>
