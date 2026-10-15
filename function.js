@@ -1,0 +1,26 @@
+
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    return a / b;
+}
+
+function greet(name) {
+    return "Hello " + name;
+}
+
+console.log("Addition:", add(10, 5));
+console.log("Subtraction:", subtract(10, 5));
+console.log("Multiplication:", multiply(10, 5));
+console.log("Division:", divide(10, 5));
+console.log(greet("Anil"));
